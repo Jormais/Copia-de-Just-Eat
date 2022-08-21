@@ -1,0 +1,541 @@
+body{
+    margin:0;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+::selection {
+    color: red;
+    background: yellow;
+  }
+
+.container{
+    display: grid;
+    margin-left: 30px;
+}
+
+.head{
+    display: flex;
+    flex-direction: row;
+    background-color: #F5F5F5;
+    padding: 10px;
+    justify-content: space-between;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+.head__log{
+    display:block;
+    position: relative;
+    right: 180px;
+    box-sizing:border-box;
+    width:160px;        
+    height:40px;
+    padding-left:160px;
+    background: url("src/resource/logoJustEat.png");
+}
+.session{
+    display: flex;
+    flex-direction: row;
+}
+.session img{
+    position: relative;
+    top:10px;
+    padding-right: 5px;
+    width: 22px;
+    height: 22px;
+}
+.session p{
+    padding-right: 10px;
+}
+.main__carousel{
+    display: flex;
+    flex-direction: row;
+    max-width: 1500px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    margin-left: 20px;
+    margin-top: 20px;
+    position: relative;
+    bottom: 20px;
+}
+.carousel__item{
+    margin-left: 35px;
+}
+.searcher__mobile{
+    display: none;
+}
+.searcher__web--input{
+    margin-left: -30px;
+    height: 61px;
+    width: 920px;
+    border-radius: 43px;
+    border: solid 1px rgb(192, 192, 192);
+    box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    padding-left: 50px;
+    font-weight: 500;
+    font-size:17px;
+}
+
+.searcher__web--input:focus{
+    border-color: rgb(255, 144, 0);
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(255,144,0,0.6);
+    outline: 0 none;
+}
+.searcher__web--icon{
+    position: relative;
+    left: 20px;
+    top: 5px;
+    z-index: 1;
+}
+.direction{
+    display: none;
+}
+.direction__web{
+    display: grid;
+    background-color: #ebe9e9;
+    width: 250px;
+    height: 116px;
+    border-radius: 43px;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+.direction__web--img{
+    position: relative;
+    right: 30px;
+    top: 35px;
+}
+.direction__web--change{
+    position: relative;
+    bottom: 20px;
+    font-size: 12px;
+}
+
+.direction__web--change a:hover{
+    color: #FF8000;
+    font-weight: 600;
+}
+
+.prin__section{
+    display: grid;
+    grid-template-areas: "aside main main";
+}
+main{
+    grid-area: main;
+    margin-left: 40px;
+}
+
+.rest__open{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+    margin-top: 20px;
+}
+
+.rest__open p{
+    padding-left: 10px;
+}
+
+.rest__open img{
+    width:20px; 
+    height:20px;
+}
+
+.card__rest{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.card__rest--title{
+    grid-area:name;
+    font-weight: 700;
+}
+
+.card__rest--title::first-letter{
+    font-size: 18px;
+}
+
+.card__rest--points{
+    display: flex;
+    flex-direction:row;
+    grid-area:points;
+}
+
+.card__rest--points img{
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+
+.card__rest--points p > span {
+    font-weight: 700;
+}
+
+.card__rest--type{
+    grid-area:info;
+    margin-left: 15px;
+}
+
+.card__rest--time{
+    display: flex;
+    grid-area:info1;
+    color:green;
+}
+
+.card__rest--time::before{
+    position: relative;
+    bottom: 4px;
+    content: url(src/resource/clock.png);
+    margin-right: 5px;
+}
+
+.card__rest--info{
+    grid-area:info2;
+    margin-right: 15px;
+}
+
+.card__rest--info1{
+    grid-area:info3;
+}
+
+.cont{
+    display: grid;
+    grid-template-areas: "name name name"
+    "points info info"
+    "info1 info1 info1"
+    "info2 info2 info3";
+    margin-left: 80px;
+    align-items: center;
+}
+
+aside{
+    grid-area: aside;
+    margin-left: 50px;
+    padding-right: 20px;
+}
+.title__aside{
+    display: flex;
+    flex-direction: row;
+}
+.title__aside img{
+    position: relative;
+    top:12px;
+    margin-left: 15px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+}
+.list__aside{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 1380px){
+
+    body{
+        margin:0;
+    }
+
+    .searcher__web--input{
+        width: 600px;
+    }
+
+    .head__log{
+        margin-left: 60px;
+    }
+
+}
+
+@media screen and (max-width: 1060px){
+
+    body{
+        margin:0;
+    }
+
+    .searcher__web--input{
+        width: 400px;
+    }
+
+    .card__rest{
+        flex-direction: column;
+    }
+
+    .cont{
+        display: grid;
+        grid-template-areas: "name name"
+        "points info"
+        "info1 info1"
+        "info2 info3";
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 860px){
+    body{
+        margin:0;
+    }
+
+    .searcher__web--input{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 772px){
+    body{
+        margin:0;
+    }
+
+    main{
+        margin-left: 0;
+    }
+
+    aside{
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    .list__aside{
+        margin-left: 0;
+        margin-right: 10px;
+    }
+    .head__log{
+        margin-left: 120px;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    body{
+        margin: 0;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+    }
+    
+    .head{
+        display: grid;
+        grid-template-areas: "ham log ico bar";
+        justify-content: space-evenly;
+        background-color: #FF8000;
+        width: 100%;
+        margin:0;
+    }
+    .session{
+        display: none;
+    }
+    .head__ham{
+        grid-area: ham;
+        padding-top: 24px;
+        padding-right: 30px;
+    }
+    .head__log--white{
+        grid-area: log;
+        padding-top: 29px;
+        padding-bottom: 53px;
+        padding-left: 30px;
+        padding-right: 30px
+    }
+    .head__log{
+        display: none;
+    }
+    .head__icon{
+        grid-area: ico;
+        padding-top: 26px;
+    }
+    .head__bar{
+        grid-area: bar;
+        padding-top: 21px
+    }
+    .searcher__mobile{
+        display: block;
+    }
+    .searcher__mobile--icon{
+        position: relative;
+        bottom: 45px;
+        left: 50px;
+        z-index: 1;
+    }   
+    .searcher__mobile--input{
+        position: relative;
+        bottom: 50px;
+        height: 61px;
+        width: 320px;
+        margin-right: 25px;
+        border-radius: 43px;
+        border: solid 1px rgb(192, 192, 192);
+        box-shadow: 0px 2px 9px 1px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        font-weight: 500;
+        font-size:17px;
+    }
+    .main__carousel{
+        display: flex;
+        flex-direction: row;
+        width: 460px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        margin-left: 20px;
+    }
+    .carousel__item{
+        margin-left: 35px;
+    }
+    .card__rest--points{
+        position:initial
+    }
+    .card__rest--points img{
+        position:initial
+    }
+    .searcher__web{
+        display: none;
+    }
+    .direction{
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+        background-color: #ebe9e9;
+        width: 370px;
+        border-radius: 43px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .direction__img{
+        width:20px;
+        height:20px;
+        margin-left: 20px;
+    }
+    .direction__change{
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    .direction__change a{
+        color: black;
+        text-decoration-color: black ;
+        
+    }
+    .direction__change p{
+        text-align: center;
+        width: 80px;
+        font-size: 15px;
+    }
+    .rest__open{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-self: flex-start;
+        margin-left: 45px;
+    }
+    .card__rest{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        margin-top: 20px;
+    }
+
+    .cont{
+        display: grid;
+        grid-template-areas: "name name name"
+        "points info info"
+        "info1 info2 info3";
+        margin-left: 0;
+    }
+
+    .card__rest--points{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .card__rest--info, .card__rest--info1{
+        margin-top: 0px;
+        margin-left: 5px;
+    }
+
+    .card__rest--points img{
+        position: relative;
+        bottom: 5px;
+    }
+
+    aside{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 412px){
+    .main__carousel{
+        width: 400px;
+        margin-left: 0px;
+    }
+    .direction{
+        width: 340px;
+    }
+    .rest__open{
+        margin-left: 30px;
+    }
+    .card__rest{
+        font-size: 12px;
+        width: 340px;
+        align-items:center;
+        justify-content: center;
+    }
+    .card__rest--img{
+        width: 340px;
+    }
+    .searcher__mobile--input{
+            bottom:80px;
+            height: 61px;
+            width: 320px;
+            margin-left: 30px;
+    }
+
+    .searcher__mobile--icon{
+        bottom:30px;
+    }
+
+}
+
+
+@media screen and (max-width: 390px){
+    .main__input{
+        position: relative;
+        bottom: 60px;
+        height: 61px;
+        width: 310px;
+        margin-left: 25px;
+    }
+    .main__search{
+        position: relative;
+        bottom:12px;
+        left: 40px;
+        z-index: 1;
+    }
+    .main__carousel{
+        width: 400px;
+        margin-left: 0px;
+        margin-top: -20px;
+    }
+    .direction{
+        width: 340px;
+    }
+    .rest__open{
+        margin-left: 20px;
+    }
+    .card__rest{
+        font-size: 12px;
+        width: 340px;
+        align-items:center;
+        justify-content: center;
+    }
+    .card__rest--img{
+        width: 330px;
+    }
+}
